@@ -1,0 +1,38 @@
+{
+  "name": "wmeimob",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "L.J.Zhang <longjia3713@163.com>",
+  "private": true,
+  "scripts": {
+    "dev": "PORT=8080 nuxt",
+    "build": "cross-env NODE_ENV=production nuxt build",
+    "start": "cross-env NODE_ENV=production nuxt",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "marked": "^0.4.0",
+    "material-design-icons-iconfont": "^3.0.3",
+    "mavon-editor": "^2.6.5",
+    "moment": "^2.22.2",
+    "nuxt": "^1.0.0",
+    "particles.js": "^2.0.0",
+    "vue-awesome-swiper": "3.1.0",
+    "vue-moment": "^4.0.0-0",
+    "vuetify": "^1.0.18"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0"
+  }
+}
