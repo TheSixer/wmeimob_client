@@ -5,7 +5,7 @@
   "author": "L.J.Zhang <longjia3713@163.com>",
   "private": true,
   "scripts": {
-    "dev": "PORT=8080 nuxt",
+    "dev": "cross-env PORT=8080 nuxt",
     "build": "cross-env NODE_ENV=production nuxt build",
     "start": "cross-env NODE_ENV=production nuxt",
     "generate": "nuxt generate",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "cross-env": "^5.2.0",
     "marked": "^0.4.0",
     "material-design-icons-iconfont": "^3.0.3",
     "mavon-editor": "^2.6.5",

@@ -3,7 +3,7 @@
     <div class="article_list_item" v-for="(opt, index) of article" :key="index">
       <div class="item_content">
         <nuxt-link :to="`/article/${index}`" class="item_title">{{ opt.title }}</nuxt-link>
-        <p class="item_abstract">{{ opt.content.slice(0, 50) }}</p>
+        <p class="item_abstract">{{ opt.content }}</p>
         <div class="">
           <v-btn icon disabled>
             <v-icon>favorite</v-icon> 233
