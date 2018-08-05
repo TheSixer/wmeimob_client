@@ -134,6 +134,7 @@ export default {
       this.dialog = false
     },
     logOut () {
+      console.log('logOut');
       this.$store.dispatch('logOut')
     }
   },

@@ -3,7 +3,8 @@ import storage from '~/utils/storage'
 import {
   userRegister,
   userLogin,
-  queryAllArticle
+  queryAllArticle,
+  queryArticleDetail
 } from '~/api'
 
 export const getters = {
@@ -39,5 +40,10 @@ export const actions = {
   async getArticles({ commit }) {
     const { data } = await queryAllArticle()
     commit('article/RECORD_ARTICLE_LIST', data.data)
+  },
+  //  获取文章详情
+  async loadArticleDetail({commit}, params = {}) {
+    const { data } = await queryArticleDetail({id: params.id})
+    commit('article/RECORD_ARTICLE_DETAIL', data)
   }
 }

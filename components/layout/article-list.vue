@@ -2,20 +2,22 @@
   <div class="article_list_view">
     <div class="article_list_item" v-for="(opt, index) of article" :key="index">
       <div class="item_content">
-        <nuxt-link :to="`/article/${index}`" class="item_title">{{ opt.title }}</nuxt-link>
+        <nuxt-link :to="`/article/${opt.id}`" class="item_title">{{ opt.title }}</nuxt-link>
         <p class="item_abstract">{{ opt.content }}</p>
         <div class="">
+          {{ opt.ctime | moment('LLLL') }}
           <v-btn icon disabled>
             <v-icon>favorite</v-icon> 233
           </v-btn>
         </div>
       </div>
-      <nuxt-link :to="`/article/${index}`" class="item_media"></nuxt-link>
+      <nuxt-link :to="`/article/${opt.id}`" class="item_media"></nuxt-link>
     </div>
   </div>
 </template>
 
 <script>
+import moment from 'moment'
 export default {
   name: 'ArticleList',
   props: {

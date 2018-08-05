@@ -50,7 +50,7 @@
           </v-form>
 
           <div>
-            <v-btn color="success" @click="addTodo">Success</v-btn>
+            <v-btn color="success">Success</v-btn>
             <v-btn color="error">Error</v-btn>
             <v-btn color="warning">Warning</v-btn>
           </div>
@@ -98,6 +98,7 @@ export default {
         }
         this.$store.dispatch('register', formData).then(() => {
           alert('注册成功')
+          this.$router.replace('/');
         }).catch((err) => {
           console.log('====================================')
           console.log(err)

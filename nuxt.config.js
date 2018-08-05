@@ -43,6 +43,7 @@ module.exports = {
       'axios',
       'vuetify',
       'moment',
+      'marked',
       'particles.js',
       'mavon-editor',
       'swiper'
@@ -65,6 +66,8 @@ module.exports = {
     { src: '~/plugins/axios', ssr: true },
     { src: '~/plugins/vuetify', ssr: false },
     { src: '~/plugins/moment', ssr: true },
+    { src: '~/plugins/marked.js' },
+    { src: '~/plugins/highlight.js' },
     { src: '~/plugins/particles.js', ssr: false },
     { src: '~/plugins/mavonEditor', ssr: false },
     { src: '~/plugins/swiper.js', ssr: false }

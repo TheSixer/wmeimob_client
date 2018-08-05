@@ -1,30 +1,21 @@
 Arguments: 
-  D:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add cross-dev
+  D:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add highlight.js
 
 PATH: 
-  D:\Program Files\cmder\bin;D:\Program Files\cmder\vendor\conemu-maximus5\ConEmu\Scripts;D:\Program Files\cmder\vendor\conemu-maximus5;D:\Program Files\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python27\;C:\Python27\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Git\cmd;D:\Program Files\cmder;D:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\Administrator\AppData\Local\Android\Sdk\tools;C:\Users\Administrator\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Java\jdk1.8.0_172\bin;C:\Program Files\Java\jdk1.8.0_172\jre\bin;D:\Program Files\mysql-8.0.11-winx64\bin;D:\Program Files\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Local\atom\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Git\usr\bin;D:\Program Files\Git\usr\share\vim\vim74;D:\Program Files\cmder\
+  D:\Program Files\comder\bin;D:\Program Files\comder\vendor\conemu-maximus5\ConEmu\Scripts;D:\Program Files\comder\vendor\conemu-maximus5;D:\Program Files\comder\vendor\conemu-maximus5\ConEmu;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\Program Files\comder;D:\Program Files\nodejs\;D:\Program Files\mysql-8.0.11-winx64\bin;D:\Program Files\Git\cmd;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\atom\bin;D:\Program Files\Git\usr\bin;D:\Program Files\Git\usr\share\vim\vim74;D:\Program Files\comder\
 
 Yarn version: 
-  1.6.0
+  1.7.0
 
 Node version: 
-  8.11.1
+  10.2.0
 
 Platform: 
   win32 x64
 
 Trace: 
-  Error: https://registry.npm.taobao.org/cross-dev: Not found
-      at Request.params.callback [as _callback] (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:65327:18)
-      at Request.self.callback (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:133155:22)
-      at emitTwo (events.js:126:13)
-      at Request.emit (events.js:214:7)
-      at Request.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:134138:10)
-      at emitOne (events.js:116:13)
-      at Request.emit (events.js:211:7)
-      at IncomingMessage.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:134058:12)
-      at Object.onceWrapper (events.js:313:30)
-      at emitNone (events.js:111:20)
+  Error: connect ETIMEDOUT 104.16.19.35:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1161:14)
 
 npm manifest: 
   {
@@ -34,7 +25,7 @@ npm manifest:
     "author": "L.J.Zhang <longjia3713@163.com>",
     "private": true,
     "scripts": {
-      "dev": "PORT=8080 nuxt",
+      "dev": "cross-env PORT=8080 nuxt",
       "build": "cross-env NODE_ENV=production nuxt build",
       "start": "cross-env NODE_ENV=production nuxt",
       "generate": "nuxt generate",
@@ -43,6 +34,7 @@ npm manifest:
     },
     "dependencies": {
       "axios": "^0.18.0",
+      "cross-env": "^5.2.0",
       "marked": "^0.4.0",
       "material-design-icons-iconfont": "^3.0.3",
       "mavon-editor": "^2.6.5",
@@ -1744,11 +1736,28 @@ Lockfile:
       safe-buffer "^5.0.1"
       sha.js "^2.4.8"
   
+  cross-env@^5.2.0:
+    version "5.2.0"
+    resolved "http://registry.npm.taobao.org/cross-env/download/cross-env-5.2.0.tgz#6ecd4c015d5773e614039ee529076669b9d126f2"
+    dependencies:
+      cross-spawn "^6.0.5"
+      is-windows "^1.0.0"
+  
   cross-spawn@^5.0.1, cross-spawn@^5.1.0:
     version "5.1.0"
     resolved "http://registry.npm.taobao.org/cross-spawn/download/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
     dependencies:
       lru-cache "^4.0.1"
+      shebang-command "^1.2.0"
+      which "^1.2.9"
+  
+  cross-spawn@^6.0.5:
+    version "6.0.5"
+    resolved "http://registry.npm.taobao.org/cross-spawn/download/cross-spawn-6.0.5.tgz#4a5ec7c64dfae22c3a14124dbacdee846d80cbc4"
+    dependencies:
+      nice-try "^1.0.4"
+      path-key "^2.0.1"
+      semver "^5.5.0"
       shebang-command "^1.2.0"
       which "^1.2.9"
   
@@ -3310,7 +3319,7 @@ Lockfile:
     version "1.0.0"
     resolved "http://registry.npm.taobao.org/is-typedarray/download/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
   
-  is-windows@^1.0.2:
+  is-windows@^1.0.0, is-windows@^1.0.2:
     version "1.0.2"
     resolved "http://registry.npm.taobao.org/is-windows/download/is-windows-1.0.2.tgz#d1850eb9791ecd18e6182ce12a30f396634bb19d"
   
@@ -3636,7 +3645,7 @@ Lockfile:
   
   marked@^0.4.0:
     version "0.4.0"
-    resolved "http://registry.npm.taobao.org/marked/download/marked-0.4.0.tgz#9ad2c2a7a1791f10a852e0112f77b571dce10c66"
+    resolved "https://registry.yarnpkg.com/marked/-/marked-0.4.0.tgz#9ad2c2a7a1791f10a852e0112f77b571dce10c66"
   
   material-design-icons-iconfont@^3.0.3:
     version "3.0.3"
@@ -3870,6 +3879,10 @@ Lockfile:
   next-tick@1:
     version "1.0.0"
     resolved "http://registry.npm.taobao.org/next-tick/download/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
+  
+  nice-try@^1.0.4:
+    version "1.0.4"
+    resolved "http://registry.npm.taobao.org/nice-try/download/nice-try-1.0.4.tgz#d93962f6c52f2c1558c0fbda6d512819f1efe1c4"
   
   no-case@^2.2.0:
     version "2.3.2"
@@ -4292,7 +4305,7 @@ Lockfile:
     version "1.0.2"
     resolved "http://registry.npm.taobao.org/path-is-inside/download/path-is-inside-1.0.2.tgz#365417dede44430d1c11af61027facf074bdfc53"
   
-  path-key@^2.0.0:
+  path-key@^2.0.0, path-key@^2.0.1:
     version "2.0.1"
     resolved "http://registry.npm.taobao.org/path-key/download/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
   
